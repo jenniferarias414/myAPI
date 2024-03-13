@@ -15,12 +15,12 @@ app.use(cors());
 User.hasMany(Expense);
 Expense.belongsTo(User);
 
-app.post('/register', register);
-app.post('/login', login);
+app.post('/api/register', register);
+app.post('/api/login', login);
 
 //expenses
-app.post('/expenses', addExpense);
-app.get('/expenses/:userId', fetchExpenses);
+app.post('/api/expenses', addExpense);
+app.get('/api/expenses/:userId', fetchExpenses);
 
 
 
